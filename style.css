@@ -247,6 +247,12 @@ section {
   justify-content: center;
   flex-direction: column;
 }
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
 .details-container {
   padding: 1.5rem;
   flex: 1;
@@ -269,8 +275,8 @@ section {
 
 .project-img {
   border-radius: 2rem;
-  width: 30%;
-  height: 30%;
+  width: 90%;
+  height: 90%;
 }
 
 .project-title{
