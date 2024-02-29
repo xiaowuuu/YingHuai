@@ -242,7 +242,7 @@ section {
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .about-details-container {
   justify-content: center;
@@ -276,8 +276,9 @@ section {
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.75rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
+
 
 .experience-details-container {
   display: flex;
@@ -314,6 +315,10 @@ section {
 .project-title{
   margin: 1rem;
   color:black;
+}
+
+.projects-discription {
+  margin-bottom: 0.5rem;
 }
 
 
