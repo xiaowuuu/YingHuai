@@ -59,7 +59,7 @@ a:hover {
   font-size: 1.5rem;
 }
 
-/* hamburger menu */
+hamburger menu
 #hamburger-nav {
   display: none;
 }
@@ -148,8 +148,7 @@ section {
 }
 
 .section-container {
-  gap:4rem;
-  height:80%;
+  display:flex;
 
 }
 
@@ -233,11 +232,13 @@ section {
   color:white;
 }
 
-.btn-container {
-  gap: 1rem;
-}
+
 
 /* about section */
+#about {
+  position: relative;
+}
+
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
@@ -262,15 +263,46 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
+.section-container{
+  gap:4rem;
+  height:80%;
+}
+/* experience section */
+#experience {
+  position: relative;
+}
 
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
 /* project section */
 #projects {
   position: relative;
+  margin: 2rem;
 }
 
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+  
 }
 
 .project-img {
@@ -283,4 +315,6 @@ section {
   margin: 1rem;
   color:black;
 }
+
+
 
