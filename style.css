@@ -198,7 +198,7 @@ section {
 }
 
 .about-pic {
-  border-radius: 3600px;
+  border-radius: 50%;
 }
 
 /* icon */
@@ -234,4 +234,26 @@ section {
 
 .btn-container {
   gap: 1rem;
+}
+
+/* project section */
+.section__projects-container {
+  display:flex;
+}
+.section__project__container {
+  display:flex;
+  height:420px;
+  width:650px;
+  margin:auto 0;
+  padding: 10px;
+  object-fit: cover;
+}
+
+.profile_picture {
+  
+}
+
+.btn-project {
+  background: none;
+  
 }
