@@ -27,7 +27,6 @@ a, .btn {
 
 nav, .nav-links {
   display: flex;
-
 }
 
 nav {
@@ -199,6 +198,7 @@ section {
 
 .about-pic {
   border-radius: 50%;
+  transform: scale(0.8);
 }
 
 /* icon */
@@ -252,6 +252,15 @@ section {
 .about-containers,
 .about-details-container {
   display: flex;
+}
+.about-container {
+  display: flex;
+}
+/* .text-container {
+  margin-left:15rem;
+} */
+.codeclan-pic {
+    transform: scale(0.6);
 }
 
 .details-container {
