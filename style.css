@@ -247,7 +247,6 @@ section {
 .about-details-container {
   justify-content: center;
   flex-direction: column;
-  
 }
 
 .about-containers,
@@ -352,6 +351,5 @@ section {
 .projects-discription {
   margin-bottom: 0.5rem;
 }
-
 
 
