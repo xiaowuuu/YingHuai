@@ -312,6 +312,12 @@ section {
   margin-bottom: 1rem;
 }
 
+.experience-xingzuocheng {
+  width:370px;
+  height:225px;
+  margin:auto 0;
+  
+}
 
 .experience-details-container {
   display: flex;
