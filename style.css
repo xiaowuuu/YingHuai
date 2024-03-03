@@ -5,6 +5,7 @@
 *{
   margin:0;
   padding:0;
+  box-sizing: border-box;
 }
 
 body {
@@ -148,7 +149,6 @@ section {
 
 .section-container {
   display:flex;
-
 }
 
 /* profile */
@@ -165,6 +165,7 @@ section {
   width:400px;
   margin:auto 0;
 }
+
 
 .section__text {
   align-self:center;
@@ -265,9 +266,18 @@ section {
 .section__content {
   display: flex;
   align-items: center; 
-  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
+.section__content > div {
+  margin: 5px;
+  flex: 0 0 calc(100% - 10px);
+  text-align: center;
 }
 
+.section__content div:not(.skills-container) {
+  order:1;
+  flex:0 0 calc(50% - 10px);
+}
 
 .section__pic-container {
   margin-right: 2rem;
@@ -297,11 +307,20 @@ section {
 }
 .skills-container{
   display:flex;
+  order:2;
+  height: 50px;
+  width:100%;
+  justify-content: center;
 }
+.skills-container > img {
+  margin:5px;
+  
+} 
 .section-container{
   gap:5rem;
   height:80%;
 }
+
 /* .section__pic-container {
   padding-right: 2rem;
 } */
@@ -402,4 +421,18 @@ section {
 }
 .email-icon {
   height:2.5rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container > div {
+  padding: 20px;
+  color: #fff;
+  margin: 5px;
+  flex: 0 0 calc(100% - 10px);
+  text-align: center;
+  font-size: 30px;
 }
