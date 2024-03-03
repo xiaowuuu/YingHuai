@@ -273,14 +273,16 @@ section {
 
 .codeclan-pic {
   /* max-width: 100%;  */
-  width:400px;
+  width:370px;
   height:225px;
   margin:auto 0;
+  border-radius: 2rem;
 }
 
 .about-text {
-  line-height: 1.5; /* Improve readability of text */
-  width:60%;
+  line-height: 1.6; 
+  width:90%;
+  font-size: 1.1rem;
 }
 .details-container {
   padding: 1.5rem;
