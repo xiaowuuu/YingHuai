@@ -265,7 +265,9 @@ section {
 .section__content {
   display: flex;
   align-items: center; 
+  /* flex-direction: column; */
 }
+
 
 .section__pic-container {
   margin-right: 2rem;
@@ -292,6 +294,9 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+}
+.skills-container{
+  display:flex;
 }
 .section-container{
   gap:5rem;
