@@ -313,10 +313,9 @@ section {
 }
 
 .experience-xingzuocheng {
-  width:370px;
-  height:225px;
-  margin:auto 0;
-  
+  width:80%;
+  height:55%;
+  margin-top:1rem;
 }
 
 .experience-details-container {
@@ -333,6 +332,7 @@ section {
   gap: 2.5rem;
   justify-content: space-around;
 }
+
 /* project section */
 #projects {
   position: relative;
@@ -366,7 +366,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height:90vh;
+  /* height:90vh; */
 }
 
 .contact-info-upper-container {
