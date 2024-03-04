@@ -259,14 +259,12 @@ section {
   display: flex;
 }
 
-/* .codeclan-pic {
-    transform: scale(0.6);
-    margin-right: 2rem;
-} */
+
 .section__content {
   display: flex;
-  align-items: center; 
   flex-wrap: wrap;
+  position: relative;
+  top: -2rem;
 }
 .section__content > div {
   margin: 5px;
@@ -321,9 +319,7 @@ section {
   height:80%;
 }
 
-/* .section__pic-container {
-  padding-right: 2rem;
-} */
+
 /* experience section */
 #experience {
   position: relative;
