@@ -23,21 +23,37 @@
   section {
     margin: 0 5%;
   }
+  .skill-icon {
+    flex-wrap: wrap;
+    width:350px;
+  }
+  .skill-icon img {
+    width:20px;
+  }
+
+  .skills-container {
+    width:auto;
+  }
   
   .section__pic-container {
     width:275px;
     height:275px;
     margin:0 auto 2rem;
   }
+  .section__content {
+    display: block; 
+    text-align: center; 
+  }
   .codeclan-pic {
     width:350px;
     height:200px;
-    margin-top: 10px;
+    margin: auto 0;
   }
   .about-text {
-    margin-top: 10px;
+    margin: auto 0;
     flex-wrap: wrap;
     width:350px;
+
   }
   .about-containers {
     margin-top:0;
@@ -106,13 +122,6 @@
   .experience-xingzuocheng {
     width:100%;
     height:100%;
-  }
-  
-  .skills-container {
-    width:auto;
-  }
-  .skill-icon{
-    display: inline-block;
   }
   
   .section__text__p2 {

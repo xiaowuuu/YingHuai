@@ -303,24 +303,27 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
+.skills-container {
+  display: flex;
+}
 .skills-container > .skill-icon{
   display:flex;
   order:2;
   height: 50px;
   width:100%;
   justify-content: center;
+  gap:5px;
 }
 .skill-icon {
   display: inline-block;
 }
+
 @media screen and (min-width: 800px) {
   br {
     display: none;
   }
 }
-.skills-container > img {
-  margin:5px;
-} 
+
 
 .section-container{
   gap:5rem;
@@ -442,7 +445,7 @@ section {
 }
 
 footer {
-  height: 26vh;
+  height: 5vh;
   margin:0 1rem;
 }
 
