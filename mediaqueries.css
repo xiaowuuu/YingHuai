@@ -14,7 +14,7 @@
   #experience, .experience-details-container {
     margin-top: 2rem;
   }
-  #profile, .section-container {
+  #about, #profile, .section-container {
     display:block;
   }
   section, .section-container {
@@ -23,12 +23,22 @@
   section {
     margin: 0 5%;
   }
+  
   .section__pic-container {
     width:275px;
     height:275px;
     margin:0 auto 2rem;
   }
-  
+  .codeclan-pic {
+    width:350px;
+    height:200px;
+    margin-top: 10px;
+  }
+  .about-text {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    width:350px;
+  }
   .about-containers {
     margin-top:0;
   }
@@ -59,6 +69,19 @@
   .btn-container {
     flex-wrap:wrap;
   }
+  .codeclan-pic {
+    width:300px;
+    height:180px;
+    margin-top: 10px;
+  }
+  .about-text {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width:350px;
+  }
+  .contact-info-upper-container {
+    flex-direction: column;
+  }
   .contact-info-container {
     margin:0;
   }
@@ -87,6 +110,9 @@
   
   .skills-container {
     width:auto;
+  }
+  .skill-icon{
+    display: inline-block;
   }
   
   .section__text__p2 {

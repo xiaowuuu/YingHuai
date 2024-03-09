@@ -272,7 +272,7 @@ section {
   text-align: center;
 }
 
-.section__content div:not(.skills-container) {
+.section__content div:not(.skill-icon) {
   order:1;
   flex:0 0 calc(50% - 10px);
 }
@@ -303,17 +303,25 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
-.skills-container{
+.skills-container > .skill-icon{
   display:flex;
   order:2;
   height: 50px;
   width:100%;
   justify-content: center;
 }
+.skill-icon {
+  display: inline-block;
+}
+@media screen and (min-width: 800px) {
+  br {
+    display: none;
+  }
+}
 .skills-container > img {
   margin:5px;
-  
 } 
+
 .section-container{
   gap:5rem;
   height:80%;
