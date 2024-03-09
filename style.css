@@ -344,15 +344,17 @@ section {
 }
 
 .experience-xingzuocheng {
-  width:80%;
-  height:55%;
-  margin-top:1rem;
+  /* width:80%;
+  
+  margin-top:1rem; */
+  max-width: 100%;
+  height:70%;
 }
 
 .experience-details-container {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  /* flex-direction: column; */
 }
 
 .article-container {
@@ -362,6 +364,9 @@ section {
   flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
+}
+.experience__description {
+  height:30%;
 }
 
 /* project section */
