@@ -61,6 +61,7 @@
   .about-containers {
     flex-wrap:wrap;
   } 
+  
   #contact, #projects {
     height:fit-content;
   } 
@@ -94,7 +95,11 @@
     margin-top: 20px;
     flex-wrap: wrap;
     width:350px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: start;
   }
+  
   .contact-info-upper-container {
     flex-direction: column;
   }
