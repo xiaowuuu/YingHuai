@@ -301,6 +301,10 @@ section {
 .details-text-container{
   flex:1;
 }
+.project-text{
+  width:50%;
+  text-align: right;
+}
 .project-button-container{
   display: flex; 
   flex-direction: column;
@@ -401,7 +405,7 @@ section {
 #projects{
   position: relative;
   margin:0;
-  height:300vh;
+  height:360vh;
   overflow:hidden;
 }
 
