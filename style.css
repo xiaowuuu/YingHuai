@@ -296,7 +296,7 @@ section {
   width:90%;
   font-size: 1.1rem;
 }
-.details-container {
+/* .details-container {
   padding: 1.5rem;
   flex: 1;
   background: white;
@@ -304,7 +304,21 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+} */
+.details-container {
+
 }
+.project-article-container {
+  
+}
+
+.project-img {
+  width:50%;
+  height:auto;
+}
+
+
+
 .skills-container {
   display: flex;
 }
@@ -374,7 +388,9 @@ section {
 }
 
 /* project section */
-#projects {
+
+
+#projects{
   position: relative;
   margin: 2rem;
 }
@@ -385,11 +401,11 @@ section {
   
 }
 
-.project-img {
+/* .project-img {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
-}
+} */
 
 .project-title{
   margin: 1rem;
