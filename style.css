@@ -299,12 +299,27 @@ section {
   display:flex;
 }
 .details-text-container{
+  display: flex;
   flex:1;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; 
+  padding:5px;
 }
 .project-text{
-  width:50%;
-  text-align: right;
+  width:70%;
+  text-align: left;
+  margin-bottom: auto;
+  font-size:large;
+  padding:10px;
 }
+.project-title {
+  text-align: left;
+  position:absolute;
+	bottom: 10px;
+  font-size: 3rem;
+}
+
 .project-button-container{
   display: flex; 
   flex-direction: column;
@@ -312,9 +327,9 @@ section {
 .project-button {
   background-color: #fff;
   border:none;
-  /* padding:0; */
   width:100%;
   cursor:pointer;
+  position:relative;
 }
 .project-button:hover {
   background-color: #DBE5E8;
@@ -405,7 +420,7 @@ section {
 #projects{
   position: relative;
   margin:0;
-  height:360vh;
+  height:370vh;
   overflow:hidden;
 }
 
@@ -424,17 +439,6 @@ section {
   height:100%;
   width:100%;
 }
-/* .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
-} */
-
-.project-title{
-  margin: 1rem;
-  color:black;
-}
-
 
 .projects-description {
   margin-bottom: 0.5rem;
