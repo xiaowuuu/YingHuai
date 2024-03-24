@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap'); */
 
 *{
   margin:0;
@@ -10,6 +10,7 @@
 
 body {
     font-family:  "Katibeh", serif;
+    /* font-family: "Literata", serif; */
     font-weight: 400;
     font-style: normal;
 }
@@ -304,20 +305,22 @@ section {
   flex-direction: column;
   justify-content: space-between;
   height: 100%; 
-  padding:5px;
+  padding:10px;
 }
 .project-text{
   width:70%;
   text-align: left;
   margin-bottom: auto;
-  font-size:large;
-  padding:10px;
+  font-size:1.4rem;
+  color: black;
+  font-family: "Katibeh", serif;
 }
 .project-title {
   text-align: left;
   position:absolute;
 	bottom: 10px;
   font-size: 3rem;
+  font-family: "Katibeh", serif;
 }
 
 .project-button-container{

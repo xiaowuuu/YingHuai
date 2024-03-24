@@ -3,8 +3,15 @@
     height:83vh;
     margin-bottom:6rem;
   }
+  #projects {
+    height:140vh;
+  }
 }
 @media screen and (max-width: 800px) {
+  #profile {
+    height:50vh;
+    margin-bottom:6rem;
+  }
   #desktop-nav {
     display: none;
   }
@@ -65,6 +72,17 @@
   #contact, #projects {
     height:fit-content;
   } 
+  #projects {
+    height:240vh;
+  }
+  .details-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-title {
+    text-align: left;
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width:600px) {
@@ -72,8 +90,11 @@
     height:40vh;
   }
   #profile {
-    height:83vh;
-    margin-bottom:0;
+    height:50vh;
+    margin-bottom:6rem;
+  }
+  #projects {
+    height:240vh;
   }
   article{
     font-size:1rem;
