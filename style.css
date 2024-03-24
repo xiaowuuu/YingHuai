@@ -141,7 +141,7 @@ a:hover {
 
 section {
   padding-top:4vh;
-  height:96vh;
+  /* height:96vh; */
   margin:0 10rem;
   box-sizing: border-box;
   min-height:fit-content;
@@ -165,8 +165,6 @@ section {
   width:400px;
   margin:auto 0;
 }
-
-
 
 .section__text {
   align-self:center;
@@ -296,25 +294,33 @@ section {
   width:90%;
   font-size: 1.1rem;
 }
-/* .details-container {
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
-} */
+
 .details-container {
-
+  display:flex;
 }
-.project-article-container {
-  
+.details-text-container{
+  flex:1;
 }
-
+.project-button-container{
+  display: flex; 
+  flex-direction: column;
+}
+.project-button {
+  background-color: #fff;
+  border:none;
+  /* padding:0; */
+  width:100%;
+  cursor:pointer;
+}
+.project-button:hover {
+  background-color: #DBE5E8;
+}
+.details-img-container{
+  flex:1;
+}
 .project-img {
-  width:50%;
-  height:auto;
+  width:100%;
+  height:100%;
 }
 
 
@@ -351,6 +357,8 @@ section {
 /* experience section */
 #experience {
   position: relative;
+  height:fit-content;
+  overflow: hidden;
 }
 
 .experience-sub-title {
@@ -392,7 +400,9 @@ section {
 
 #projects{
   position: relative;
-  margin: 2rem;
+  margin:0;
+  height:300vh;
+  overflow:hidden;
 }
 
 .color-container {
@@ -400,7 +410,16 @@ section {
   background: rgb(250, 250, 250);
   
 }
+.product-details-container {
+  display: flex;
+  justify-content: space-between;
+  height:100vh;
+}
 
+.project-background{
+  height:100%;
+  width:100%;
+}
 /* .project-img {
   border-radius: 2rem;
   width: 90%;
@@ -412,7 +431,8 @@ section {
   color:black;
 }
 
-.projects-discription {
+
+.projects-description {
   margin-bottom: 0.5rem;
 }
 
