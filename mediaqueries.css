@@ -5,12 +5,12 @@
     margin-bottom:6rem;
   }
   #projects {
-    height:fit-content;
+    height:370vh;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #projects {
-    height:fit-content;
+    height:370vh;
   }
 }
 @media screen and (max-width: 800px) {
@@ -77,12 +77,12 @@
     flex-wrap:wrap;
   } 
   
-  #contact, #projects {
+  #contact {
     height:fit-content;
   } 
-  /* #projects {
+  #projects {
     height:240vh;
-  } */
+  }
   .details-container {
     /* display: flex; */
     flex-direction: column;
@@ -104,7 +104,7 @@
     margin-bottom:6rem;
   }
   #projects {
-    height:fit-content;
+    height:220vh;
   }
   article{
     font-size:1rem;
@@ -177,11 +177,11 @@
     height:auto;
   }
   #projects{
-    height:fit-content;
+    height:240vh;
   }
 }
 @media screen and (max-width:375px){
   #projects{
-    height:fit-content;
+    height:270vh;
   }
 }
