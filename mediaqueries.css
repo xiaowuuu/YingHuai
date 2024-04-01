@@ -4,14 +4,9 @@
     height:83vh;
     margin-bottom:6rem;
   }
-  #projects {
-    height:370vh;
-  }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  #projects {
-    height:370vh;
-  }
+  
 }
 @media screen and (max-width: 800px) {
   #profile {
@@ -80,9 +75,9 @@
   #contact {
     height:fit-content;
   } 
-  #projects {
+  /* #projects {
     height:240vh;
-  }
+  } */
   .details-container {
     /* display: flex; */
     flex-direction: column;
@@ -103,9 +98,7 @@
     height:50vh;
     margin-bottom:6rem;
   }
-  #projects {
-    height:220vh;
-  }
+  
   article{
     font-size:1rem;
   }
@@ -176,12 +169,7 @@
     width:auto;
     height:auto;
   }
-  #projects{
+  /* #projects{
     height:240vh;
-  }
-}
-@media screen and (max-width:375px){
-  #projects{
-    height:270vh;
-  }
+  } */
 }

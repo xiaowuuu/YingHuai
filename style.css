@@ -423,7 +423,6 @@ section {
 #projects{
   position: relative;
   margin:0;
-  height:370vh;
   overflow:hidden;
 }
 
@@ -435,7 +434,6 @@ section {
 .product-details-container {
   display: flex;
   justify-content: space-between;
-  height:100vh;
 }
 
 .project-background{
