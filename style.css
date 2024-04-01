@@ -382,6 +382,7 @@ section {
   position: relative;
   height:fit-content;
   overflow: hidden;
+  margin:0;
 }
 
 .experience-sub-title {
