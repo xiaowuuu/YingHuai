@@ -73,11 +73,9 @@
   #contact {
     height:fit-content;
   } 
-  /* #projects {
-    height:240vh;
-  } */
+  
   .details-container {
-    /* display: flex; */
+    
     flex-direction: column;
   }
   .project-title {
@@ -167,7 +165,5 @@
     width:auto;
     height:auto;
   }
-  /* #projects{
-    height:240vh;
-  } */
+  
 }
