@@ -5,9 +5,7 @@
     margin-bottom:6rem;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  
-}
+
 @media screen and (max-width: 800px) {
   #profile {
     height:50vh;
