@@ -215,13 +215,6 @@ a:hover {
   font-weight:600;
 }
 
-#socials-container{
-  display:flex;
-  justify-content: center;
-  margin-top:1rem;
-  gap:1rem;
-}
-
 /* icon */
 .icon {
   cursor:pointer;
@@ -340,7 +333,6 @@ a:hover {
 }
 .details-text-container{
   display: flex;
-  /* flex:1; */
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
@@ -348,7 +340,7 @@ a:hover {
   padding:10px;
 }
 .project-text{
-  width:70%;
+  width:100%;
   text-align: left;
   margin: 0;
   font-size:1.1rem;
@@ -384,36 +376,8 @@ a:hover {
   height:fit-content;
   overflow: hidden;
   margin:0;
-}
-
-.experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.experience-xingzuocheng {
-  max-width: 100%;
-  height:70%;
-}
-
-.experience-details-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.article-container {
-  display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
-}
-.experience__description {
-  height:30%;
+  padding: 0;
+  padding-top: 4vh;
 }
 
 /* project section */
@@ -421,7 +385,8 @@ a:hover {
   position: relative;
   margin:0;
   overflow:hidden;
-  padding: 0;
+  padding-top: 4vh;
+  padding-bottom: 0;
 }
 .project-button-container{
   display: flex; 
@@ -441,11 +406,6 @@ a:hover {
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
-}
-
-.product-details-container {
-  display: flex;
-  justify-content: space-between;
 }
 
 .project-background{
