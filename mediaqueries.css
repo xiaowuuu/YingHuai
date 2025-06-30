@@ -198,6 +198,9 @@
   .project-text {
     font-size: 1.3rem;
   }
+  footer {
+    display:grid;
+  }
 }
 
 @media screen and (min-width: 1200px) {
