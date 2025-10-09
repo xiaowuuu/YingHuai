@@ -189,6 +189,10 @@ a:hover {
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.project-banner {
+  width: 100%;
+  height:600.33px;
+}
 
 .section__pic-container {
   display: flex;
@@ -477,3 +481,69 @@ footer p {
   text-align: center;
 }
 
+#project-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#project-details .section__text__p1 {
+  margin-bottom: 0.25rem;
+}
+
+#project-details .title {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.project-section img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.project-section .project-text {
+  margin: 1rem auto;
+  max-width: 700px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgb(50, 50, 50);
+  text-align: center;
+}
+
+/* Buttons */
+#project-details .btn-container {
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+/* Responsive layout tweaks */
+@media (min-width: 768px) {
+  #project-details {
+    padding: 4rem 2rem;
+  }
+
+  .project-section img {
+    max-width: 80%;
+  }
+
+  .project-section .project-text {
+    font-size: 1.25rem;
+  }
+}
