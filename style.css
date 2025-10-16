@@ -533,6 +533,46 @@ footer p {
   justify-content: center;
 }
 
+/* ux page */
+.ux-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ux-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: start;
+  column-gap: 1.5rem;
+}
+
+.ux-left {
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.ux-right {
+  color: #444;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .ux-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ux-left {
+    margin-bottom: 0.3rem;
+  }
+}
+
+
 /* Responsive layout tweaks */
 @media (min-width: 768px) {
   #project-details {
