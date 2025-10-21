@@ -567,6 +567,7 @@ footer p {
   color: black;
   line-height: 1.6;
   text-align: left;
+  font-size: 1rem;
 }
 
 .img-text {
@@ -592,7 +593,7 @@ footer p {
 }
 
 .ux-text {
-  font-size:1rem;
+  font-size:1.2rem;
   color:black;
   font-family: "Times";
   text-align: left;
