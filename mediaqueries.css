@@ -108,6 +108,12 @@
   .project-section .project-text {
     font-size: 1.25rem;
   }
+
+  .contact-info-upper-container {
+  display:flex;
+  justify-content:center;
+  flex-direction: row;
+}
 }
 @media screen and (min-width: 1024px) {
   #desktop-nav {
@@ -215,6 +221,12 @@
   .details-text-container {
     width: 70%;
   }
+
+  .contact-info-upper-container {
+  display:flex;
+  justify-content:center;
+  flex-direction: row;
+}
 }
 
 @media screen and (min-width: 1200px) {
