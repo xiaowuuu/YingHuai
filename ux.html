@@ -47,22 +47,25 @@
   <div class="ux-row">
     <p class="ux-left">Context</p>
     <p class="ux-right">
-      An ongoing personal project that helps people share and discover preloved items left on the street for collection, reducing waste while building local connections.
+      An ongoing product I designed and am building to improve how people share and discover free items left on the street. Current solutions are fragmented and unreliable, often leading to low discovery efficiency and uncertainty around item availability.
     </p>
   </div>
 
   <div class="ux-row">
     <p class="ux-left">Brief</p>
     <p class="ux-right">
-      Design and develop a geolocation-based mobile app that makes it easy for users to share and discover free resources locally. The solution needed to be intuitive, accessible and address real-world challenges.
+      Design and develop a geolocation-based mobile app that enables reliable, real-time local sharing of free items. 
+      <br>The challenge was to balance ease of use with real-world constraints such as changing availability, location accuracy, and time-sensitive decision-making.
     </p>
   </div>
 
-  <div class="ux-row">
+  <br class="ux-row">
     <p class="ux-left">Outcome</p>
-    <p class="ux-right">
-      I conducted user research, identifying key pain points that informed design decisions including dual navigation options (map and list views) and status tracking features. Delivered user personas, journey maps, user flows, wireframes and high-fidelity prototypes on Figma. Currently I'm developing the MVP using React Native and Expo, preparing to deploy for real-world testing and continued iteration based on user feedback.
-    </p>
+    <ol class="ux-right">
+      <li>Defined and prioritised core product flows (discovery, posting, status tracking) based on user behaviour.</li>
+      <li>Designed a dual navigation system (map + list) to support different discovery patterns, and introduced real-time status tracking to reduce wasted trips.</li>
+      <li>Validated decisions through usability testing, and currently developing the MVP using React Native and Expo, working within technical constraints to prepare for real-world launch.</li>
+    </ol>
   </div>
 
   <div class="ux-row">
@@ -75,7 +78,7 @@
     <ol class="ux-right">
       <li>Research & Testing: Semi-structured interviews, in-person usability testing</li>
       <li>Design: Figma (wireframes, prototypes, design system)</li>
-      <li>Development: React Native, Expo</li>
+      <li>Development: React Native, Expo, Supabase</li>
     </ol>
   </div>
 </div>
@@ -96,18 +99,21 @@
   <div class="ux-section">
     
   <p class="ux-title">01. User Research & Analysis</p>
-  <p class="ux-text">I conducted semi-structured interviews to understand participants' past experiences with existing sharing methods. Through targeted questions about their use of Facebook groups and street discoveries, I identified key pain points including difficulty with local discovery and uncertain item availability.</p>
+  <p class="ux-text">I conducted semi-structured interviews to understand how people currently share and discover free items, focusing on both online platforms (e.g. Facebook groups) and real-world street discovery. These methods were chosen to capture both digital behaviours and real-world constraints.</p>
   <p class="ux-text">The research revealed two distinct pain point journeys: one is based on user experience on existing online platforms (Facebook groups), and another one is based on street finds. Understanding both digital and physical contexts was crucial to designing a comprehensive solution that addressed the full user experience.</p>
 <div class="ux-row">
     <p class="ux-left">User Insight</p>
       <ol class="ux-right">
-        <li>Many users enjoy browsing but rarely collect items due to lack of real-time updates or casual curiosity.</li>
-        <li>Enthusiastic users want to quickly see nearby items while they’re already out and about.</li>
-        <li>Easy to use, quick to check item status, location and information</li>
+        <li>Users browse frequently but rarely act due to uncertainty around item availability or casual curiosity.</li>
+        <li>Users enjoy to have a regular and quick scanning on what items nearby.</li>
+        <li>Enthusiastic users want to quickly see nearby items while they're already out and about.</li>
+        <li>Real-time relevance is critical, outdated information leads to wasted trips.</li>
+        <li>Posting must be quick and low-effort to encourage contribution</li>
         <li>Sharing items feels rewarding, users enjoy giving and seeing others benefit.</li>
-        <li>Users are forgiving about item quality or availability since everything is free.</li>
+        <li>Users are flexible about item quality, but not about reliability</li>
       </ol>
     </div>
+    <p>These insights reframed the problem from “improving browsing” to “reducing uncertainty and enabling confident decision-making”.</p>
 </div>
 <div class="ux-section">
   <img src="./assets/pain_point_journey.png" alt="Online user journey" class="project-banner">
@@ -118,17 +124,10 @@
   <p class="img-text">User Journey with Pain Point (street discovery)</p>
 </div>
 
-
-  <!-- <div class="ux-row">
-    <p class="ux-left">Conclusion</p>
-    <p class="ux-right">
-      Users can explore available items nearby, post their own finds, and contribute to a community-driven cycle of sharing and sustainability.
-    </p>
-  </div> -->
   <div class="ux-section">
     <p class="ux-title">02. Design</p>
     <p class="ux-text">
-      I began by mapping out users' basic actions and creating user flows to understand navigation paths through the app. This helped me identify all necessary key functionalities, screens and plan the app architecture. Key user journeys included: discovering items via map or list view, posting new finds, collecting items, and gallery for checking item history. This planning phase ensured every screen had a clear purpose tied to user needs identified in research.
+      I began by mapping out users' basic actions and creating user flows to understand navigation paths through the app. This helped me identify all necessary key functionalities, screens and plan the app architecture. Key user journeys included: discovering items via map or list view, posting new finds, collecting items, and gallery for checking item history and profile page for user setting and user contribution. This planning phase ensured every screen had a clear purpose tied to user needs identified in research.
     </p>
   </div>
   <div class="ux-section">
@@ -143,18 +142,26 @@
     <p class="ux-text">Design Solutions</p>
     <ol class="ux-text">
       <b><li>Dual Navigation (map + list views)</li></b>
-      <p><b>Pain point</b>: Users had varying preferences for discovering items, some users prefer spatial exploration, others want quick scanning.</p>
-      <p><b>Solution:</b> Designed both map-based and list-based interfaces, allowing users to switch based on context and preference.</p>
-      <p><b>Impact:</b> Accommodates different user behaviours and contexts (casual browsing or targeted searching).</p>
+      <p><b>Pain point</b>: Users had varying preferences for discovering items, some users prefer spatial exploration, others want quick scanning, list is accessible to screen reader.</p>
+      <p><b>Solution:</b>I chose a hybrid system despite added complexity, as discovery is the core product value.</p>
+      <p><b>Trace-off:</b> increased UI complexity</p>
+      <p><b>Decision: </b>default to map view, with quick toggle to list</p>
       <b><li>Real-time status tracking</li></b>
-      <p><b>Pain point: </b>Uncertainty about item availability led to wasted trips and frustration.</p>
-      <p><b>Solution: </b>Implemented status tracking system that users can mark items as 'collected' or 'unavailable'.</p>
+      <p><b>Pain point: </b>Users often encountered unavailable items, leading to wasted trips and frustration.</p>
+      <p><b>Solution: </b>Implemented status tracking system that users can mark items as 'collected' or 'unavailable' to reduce uncertainty.</p>
       <p><b>Impact: </b>Reduces wasted trips and manages user expectations around availability.</p>
+      <p><b>Trade-off: </b>relied on user updates</p>
+      <p><b>Validation: </b>users consistently checked availability before deciding to travel.</p>
+
       <b><li>Streamlined posting flow</li></b>
       <p><b>Pain point: </b>Sharing items needed to be effortless to encourage community participation.</p>
-      <p><b>Solution: </b>Minimised posting steps and required information, making contribution quick and simple.</p>
+      <p><b>Solution: </b>I minimised required inputs to make sharing quick and effortless, informed by analysing existing posting behaviours and how users describe locations.</p>
       <p><b>Impact: </b>Encourages more users to share finds, building community engagement.</p>
+      <p><b>Trade-off: </b>less structured data</p>
     </ol>
+    <img src="./assets/posting_flow.png" alt="Posting Flow" class="project-banner"/>
+    <p class="ux-text">By analysing posting patterns across existing platforms, I identified that effective posts consistently combine street names, nearby landmarks, and visual cues.
+This informed the design of the posting flow, which balances minimal input with sufficient location context to ensure items remain easy to find.</p>
   </div>
 
   <div class="ux-section">
@@ -194,14 +201,19 @@
       <p class="ux-left">Insights</p>
         <ol class="ux-right">
           <li>Users can't find any scenarios to view item history so the gallery feature didn't fully align with their needs.</li>
-          <li>Posting was easy and effortless, showing the flow for sharing items worked well.
+          <li>Posting was easy and required minimal effort.
           </li>
-          <li>Tracking partial item collection was confusing, especially when users only collected part of a set and needed to update the status.</li>
+          <li>Partial item collection introduced confusion due to unclear states.</li>
         </ol>
     </div>
     <div class="ux-row">
       <p class="ux-left">Iteration</p>
-        <p class="ux-right">Removed gallery feature replaced by 'Favourite' screen to track item status.</p>
+        <ol class="ux-right">
+          <li>Removed gallery feature replaced by 'Favourite' screen to track item status.</li>
+          <li>Simplified status handling to reduce cognitive load</li>
+          <li>I intentionally deferred solving partial collection, as it introduces significant UX and technical complexity.</li>
+        <li>Instead, I prioritised launching a simpler MVP to validate real-world behaviour before addressing edge cases.</li></ol>
+
     </div>
     
     <img src="./assets/figma.png" alt="Final Design" class="project-banner"/>
@@ -212,11 +224,9 @@
 
   <div class="ux-section">
     <p class="ux-title">04. Learning and Next</p>
-    <p class="ux-text">Usability testing revealed two key insights: 1. difficulty tracking item status, and 2. challenges with partial item collection, I then updated the Favourite feature to help user save and track item status.
+    <p class="ux-text">This project reinforced the importance of prioritising real user behaviour over feature completeness. Rather than solving all edge cases upfront, I focused on defining a clear MVP that supports core user needs and can be validated in real-world usage. I am currently developing the MVP using React Native and Expo, making design decisions under technical constraints such as real-time updates and location handling.
     </p>
-    <p class="ux-text">The partial collection challenge proved more complex as it would increase the user flow complexity, rather than assuming a solution, I plan to launch the MVP and collect feedback from real users and then conduct another round of usability testing. This approach ensures any design iteration is based on actual user behaviour and validated needs rather than assumptions.
-    </p>
-    <p class="ux-text">I'm developing an MVP using React Native and Expo that focuses on core features identified in research. I learned to be comfortable sharing work early and iterating based on user feedback.</p>
+    <p class="ux-text">Next, I will iterate on key flows based on real user feedback and behaviour (e.g. successful collection rate). From a technical perspective, I plan to explore a local-first approach to support posting in low or no network conditions, ensuring users can still upload items in real-world, on-the-go scenarios.</p>
   </div>
     <div class="ux-section">
     
