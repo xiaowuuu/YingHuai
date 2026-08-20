@@ -7,254 +7,808 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mediaqueries.css">
 </head>
+
 <body>
+
   <nav id="desktop-nav">
     <div class="logo">Ying Huai</div>
+
     <div>
       <ul class="nav-links">
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#projects">Projects</a></li>
-        <!-- <li><a href="index.html#experience">Experience</a></li> -->
-        <li><a href="ux.html" class=""active>UX Design</a></li>
+        <li><a href="ux.html" class="active">UX Design</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
+
   <nav id="hamburger-nav">
     <div class="logo">Ying Huai</div>
+
     <div class="hamburger-menu">
       <div class="hamburger-icon" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
       </div>
+
       <div class="menu-links">
         <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
         <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
-        <!-- <li><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li> -->
-        <li><a href="ux.html" class=""active>UX Design</a></li>
+        <li><a href="ux.html" class="active">UX Design</a></li>
         <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
       </div>
     </div>
   </nav>
+
+
   <main>
+
     <section id="project-details">
-  <p class="section__text__p1">Featured Project</p>
-  <h1 class="title">StreetJams: Map-based sharing for sustainable living</h1>
-      <img src="./assets/mockup_banner.png" alt="By the bin mockup" class="project-banner"/>
 
-<div class="ux-section"></div>
-  <div class="ux-row">
-    <p class="ux-left">Context</p>
-    <p class="ux-right">
-      An ongoing product I designed and am building to improve how people share and discover free items left on the street. Current solutions are fragmented and unreliable, often leading to low discovery efficiency and uncertainty around item availability.
-    </p>
+      <!-- HERO -->
+
+      <p class="section__text__p1">Featured Project</p>
+
+      <h1 class="title">
+        StreetJams: Designing a more reliable way to discover free items locally
+      </h1>
+
+      <img
+        src="./assets/mockup_banner.png"
+        alt="StreetJams mobile app mockups"
+        class="project-banner"
+      />
+
+
+      <!-- PROJECT SNAPSHOT -->
+
+      <div class="ux-section">
+
+        <div class="ux-row">
+          <p class="ux-left">Overview</p>
+
+          <p class="ux-right">
+            StreetJams is a location-based mobile app for discovering, sharing and
+            collecting free items left in the street.
+          </p>
+        </div>
+
+        <div class="ux-row">
+          <p class="ux-left">Role</p>
+
+          <p class="ux-right">
+            Product Designer · UX Researcher · Developer
+          </p>
+        </div>
+
+        <div class="ux-row">
+          <p class="ux-left">Tools</p>
+
+          <p class="ux-right">
+            Figma · React Native · Expo · Supabase
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- OUTCOME -->
+
+      <div class="ux-section">
+
+        <p class="ux-title">What I changed</p>
+
+        <div class="ux-row">
+          <p class="ux-left">Discovery</p>
+
+          <p class="ux-right">
+            Designed map + list navigation to support both spatial exploration
+            and quick scanning of nearby items.
+          </p>
+        </div>
+
+        <div class="ux-row">
+          <p class="ux-left">Reliability</p>
+
+          <p class="ux-right">
+            Introduced item status tracking to help users judge whether a find
+            is still worth the trip.
+          </p>
+        </div>
+
+        <div class="ux-row">
+          <p class="ux-left">Contribution</p>
+
+          <p class="ux-right">
+            Simplified the posting flow to make sharing a street find quick
+            and low-effort.
+          </p>
+        </div>
+
+        <p class="ux-text">
+          The MVP is now being developed and tested in real-world conditions.
+        </p>
+
+      </div>
+
+
+      <!-- OPPORTUNITY -->
+
+      <div class="ux-section">
+
+        <p class="ux-title">The Opportunity</p>
+
+        <p class="ux-text">
+          Free items are already being shared — but discovery is fragmented.
+        </p>
+
+        <img
+          src="./assets/meadows.jpeg"
+          alt="StreetJams project context"
+          class="project-banner"
+        />
+
+        <div class="ux-row">
+          <p class="ux-left">Fragmented</p>
+
+          <p class="ux-right">
+            People rely on Facebook groups, community platforms or chance
+            encounters to find items.
+          </p>
+        </div>
+
+        <div class="ux-row">
+          <p class="ux-left">Uncertain</p>
+
+          <p class="ux-right">
+            Items can disappear before someone arrives, making online
+            information difficult to trust.
+          </p>
+        </div>
+
+        <div class="ux-row">
+          <p class="ux-left">Time-sensitive</p>
+
+          <p class="ux-right">
+            The value of a street find depends heavily on location, timing
+            and availability.
+          </p>
+        </div>
+
+        <p class="ux-text">
+          <strong>Opportunity:</strong> Make local sharing easier to discover —
+          and more reliable to act on.
+        </p>
+
+      </div>
+
+
+      <!-- RESEARCH -->
+
+      <div class="ux-section">
+
+        <p class="ux-title">01. Research</p>
+
+        <p class="ux-text">
+          I combined semi-structured interviews, platform analysis and
+          real-world observation to understand how people discover and share
+          free items.
+        </p>
+
+      </div>
+
+      <div class="ux-section">
+
+        <img
+          src="./assets/research_roadmap.png"
+          alt="StreetJams research roadmap"
+          class="project-banner"
+        />
+
+        <p class="img-text">
+          Research approach
+        </p>
+
+      </div>
+
+
+      <!-- RESEARCH INSIGHT -->
+
+      <div class="ux-section">
+
+        <p class="ux-title">The key insight</p>
+
+        <p class="ux-text">
+          <strong>
+            The problem wasn't finding things. It was knowing whether they
+            were still worth finding.
+          </strong>
+        </p>
+
+        <div class="ux-row">
+          <p class="ux-left">Reliability</p>
+
+          <p class="ux-right">
+            Users were willing to compromise on item quality, but not on
+            outdated or unreliable information.
+          </p>
+        </div>
+
+        <div class="ux-row">
+          <p class="ux-left">Discovery habit</p>
+
+          <p class="ux-right">
+            Users liked quickly scanning what was available nearby,
+            especially while already out and about.
+          </p>
+        </div>
+
+        <div class="ux-row">
+          <p class="ux-left">Contribution</p>
+
+          <p class="ux-right">
+            Posting needed to be quick and low-effort to encourage people
+            to contribute.
+          </p>
+        </div>
+
+        <p class="ux-text">
+          These insights shifted the product focus from simply improving
+          browsing to reducing uncertainty and supporting confident decisions.
+        </p>
+
+      </div>
+
+
+      <!-- USER JOURNEYS -->
+
+      <div class="ux-section">
+
+        <img
+          src="./assets/pain_point_journey.png"
+          alt="Online user journey and pain points"
+          class="project-banner"
+        />
+
+        <p class="img-text">
+          Online sharing journey
+        </p>
+
+      </div>
+
+      <div class="ux-section">
+
+        <img
+          src="./assets/user_journey_street.png"
+          alt="Street discovery journey and pain points"
+          class="project-banner"
+        />
+
+        <p class="img-text">
+          Real-world street discovery journey
+        </p>
+
+      </div>
+
+
+      <!-- FROM INSIGHT TO DECISION -->
+
+      <div class="ux-section">
+
+        <p class="ux-title">From insight to product decisions</p>
+
+        <p class="ux-text">
+          Research pointed to three priorities:
+          <strong>fast discovery, reliable availability and low-friction posting.</strong>
+          I used these principles to prioritise the MVP and evaluate design trade-offs.
+        </p>
+
+      </div>
+
+
+      <!-- DESIGN DECISION 01 -->
+
+      <div class="ux-section">
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            Discovery
+          </p>
+
+          <p class="ux-right">
+            <strong>Supporting two discovery behaviours</strong>
+            <br><br>
+
+            <strong>Problem:</strong>
+            Users discovered items in different ways — some preferred
+            spatial exploration, while others wanted to quickly scan nearby
+            options.
+            <br><br>
+
+            <strong>Decision:</strong>
+            I introduced map + list views, using the map as the default
+            while keeping the list one tap away.
+            <br><br>
+
+            <strong>Trade-off:</strong>
+            More UI complexity in exchange for supporting different
+            discovery behaviours.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- DESIGN DECISION 02 -->
+
+      <div class="ux-section">
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            Reliability
+          </p>
+
+          <p class="ux-right">
+            <strong>Making availability visible</strong>
+            <br><br>
+
+            <strong>Problem:</strong>
+            Users could travel to an item only to discover that it had
+            already been collected or was no longer available.
+            <br><br>
+
+            <strong>Decision:</strong>
+            I introduced user-updated item states such as
+            <strong>collected</strong> and <strong>unavailable</strong>.
+            <br><br>
+
+            <strong>Validation:</strong>
+            Users consistently checked availability before deciding
+            whether to travel.
+            <br><br>
+
+            <strong>Impact:</strong>
+            The status system makes availability part of the core
+            decision-making experience rather than secondary information.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- DESIGN DECISION 03 -->
+
+      <div class="ux-section">
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            Contribution
+          </p>
+
+          <p class="ux-right">
+            <strong>Making posting effortless</strong>
+            <br><br>
+
+            <strong>Problem:</strong>
+            Sharing a street find requires enough location context for
+            someone else to find it, but too much input can discourage
+            contribution.
+            <br><br>
+
+            <strong>Decision:</strong>
+            I minimised required inputs while preserving the location
+            information people naturally use when describing street finds.
+            <br><br>
+
+            <strong>Trade-off:</strong>
+            Less structured data in exchange for lower contribution friction.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- POSTING FLOW -->
+
+      <div class="ux-section">
+
+        <img
+          src="./assets/posting_flow.png"
+          alt="StreetJams posting flow"
+          class="project-banner"
+        />
+
+        <p class="img-text">
+          Posting flow
+        </p>
+
+        <p class="ux-text">
+          Analysis of existing posts showed that people naturally combine
+          street names, nearby landmarks and visual cues when describing
+          where an item is.
+        </p>
+
+        <p class="ux-text">
+          <strong>Design principle:</strong>
+          Location doesn't need to be precise — it needs to be understandable.
+        </p>
+
+      </div>
+
+
+      <!-- USER FLOW / WIREFRAMES -->
+
+      <div class="ux-section">
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            Wireframing
+          </p>
+
+          <p class="ux-right">
+            I translated the research insights into core user flows before
+            moving into high-fidelity design. This helped keep each screen
+            tied to a specific user need and MVP priority.
+          </p>
+
+        </div>
+
+        <img
+          src="./assets/userflow.png"
+          alt="StreetJams app structure and user flow draft"
+          class="project-banner"
+        />
+
+        <p class="img-text">
+          App structure and user flow
+        </p>
+
+        <img
+          src="./assets/user_flow.png"
+          alt="StreetJams basic user flow"
+          class="project-banner"
+        />
+
+        <p class="img-text">
+          Core user flow
+        </p>
+
+      </div>
+
+
+      <!-- SKETCHING -->
+
+      <div class="ux-section">
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            Sketching
+          </p>
+
+          <p class="ux-right">
+            I explored the information architecture and navigation patterns
+            through low-fidelity sketches before committing to visual design.
+          </p>
+
+        </div>
+
+        <img
+          src="./assets/initial_sketch.png"
+          alt="StreetJams sketches and wireframes"
+          class="project-banner"
+        />
+
+        <p class="img-text">
+          Sketching and wireframing
+        </p>
+
+      </div>
+
+
+      <!-- VISUAL DESIGN -->
+
+      <div class="ux-section">
+
+        <p class="ux-title">Visual design & prototyping</p>
+
+        <img
+          src="./assets/style_guide.png"
+          alt="StreetJams style guide"
+          class="img-vertical"
+        />
+
+        <p class="img-text">
+          Visual design system
+        </p>
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            Design system
+          </p>
+
+          <p class="ux-right">
+            I refined typography, colour, iconography and component patterns
+            alongside the product design, creating a visual system that could
+            support both the prototype and production implementation.
+          </p>
+
+        </div>
+
+        <img
+          src="./assets/prototyping.png"
+          alt="StreetJams high-fidelity prototype"
+          class="project-banner"
+        />
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            High-fidelity prototype
+          </p>
+
+          <p class="ux-right">
+            I built an interactive prototype in Figma with key states and
+            interactions represented so usability testing could focus on
+            realistic product behaviour rather than static screens.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- USABILITY TESTING -->
+
+      <div class="ux-section">
+
+        <p class="ux-title">02. Usability Testing</p>
+
+        <p class="ux-text">
+          I ran task-based usability tests using the high-fidelity prototype,
+          focusing on discovery, posting and item status.
+        </p>
+
+        <p class="ux-text">
+          Sessions were conducted in person, allowing me to observe hesitation,
+          confusion and workarounds and follow up in real time.
+        </p>
+
+      </div>
+
+
+      <!-- TESTING FINDINGS -->
+
+      <div class="ux-section">
+
+        <p class="ux-title">Testing changed the product</p>
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            Gallery
+          </p>
+
+          <p class="ux-right">
+            <strong>Finding:</strong>
+            Users couldn't identify a clear scenario for viewing item history.
+            <br><br>
+
+            <strong>Response:</strong>
+            Removed the Gallery feature and replaced it with a Favourites
+            screen aligned with a clearer user need.
+          </p>
+
+        </div>
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            Item status
+          </p>
+
+          <p class="ux-right">
+            <strong>Finding:</strong>
+            Partial collection introduced confusion around item states.
+            <br><br>
+
+            <strong>Response:</strong>
+            Simplified status handling to reduce cognitive load.
+          </p>
+
+        </div>
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            MVP scope
+          </p>
+
+          <p class="ux-right">
+            <strong>Finding:</strong>
+            Partial collection created a complex edge case.
+            <br><br>
+
+            <strong>Decision:</strong>
+            I deferred the problem rather than adding complexity to the MVP.
+            The priority was to validate the core collection journey first.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- FINAL DESIGN -->
+
+      <div class="ux-section">
+
+        <img
+          src="./assets/figma.png"
+          alt="StreetJams final product design"
+          class="project-banner"
+        />
+
+        <p class="img-text">
+          Final product design
+        </p>
+
+      </div>
+
+
+      <!-- IMPACT -->
+
+      <div class="ux-section">
+
+        <p class="ux-title">03. Impact & next steps</p>
+
+        <p class="ux-text">
+          The project reinforced an important product principle:
+          <strong>an effective MVP is not the one with the most features,
+          but the one that validates the riskiest assumptions early.</strong>
+        </p>
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            Validated
+          </p>
+
+          <p class="ux-right">
+            Users consistently checked availability before deciding whether
+            to travel, and posting was perceived as a low-effort task.
+          </p>
+
+        </div>
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            Expected impact
+          </p>
+
+          <p class="ux-right">
+            Reduce unnecessary trips, increase confidence during discovery
+            and make contributing easier.
+          </p>
+
+        </div>
+
+        <div class="ux-row">
+
+          <p class="ux-left">
+            Next to measure
+          </p>
+
+          <p class="ux-right">
+            Collection success rate, posting completion and availability
+            accuracy.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- CURRENT STATUS -->
+
+      <div class="ux-section">
+
+  <p class="ux-title">Current status</p>
+
+  <p class="ux-text">
+    StreetJams is now live on iOS and Android, with
+    <strong>300+ downloads</strong> across both platforms.
+  </p>
+
+  <p class="ux-text">
+    I'm continuing to iterate on the product based on real-world
+    user behaviour, feedback and usage patterns.
+  </p>
+
+  <div class="download-badges">
+    <a href="https://apps.apple.com/gb/app/streetjams/id6777686015" target="_blank" rel="noopener noreferrer">
+      <img
+        src="./assets/app-store-badge.png"
+        alt="Download StreetJams on the App Store"
+      />
+    </a>
+
+    <a href="https://play.google.com/store/apps/details?id=com.streetjams.app" target="_blank" rel="noopener noreferrer">
+      <img
+        src="./assets/GetItOnGooglePlay_Badge_Web_color_English.png"
+        alt="Get StreetJams on Google Play"
+      />
+    </a>
   </div>
 
-  <div class="ux-row">
-    <p class="ux-left">Brief</p>
-    <p class="ux-right">
-      Design and develop a geolocation-based mobile app that enables reliable, real-time local sharing of free items. 
-      <br>The challenge was to balance ease of use with real-world constraints such as changing availability, location accuracy, and time-sensitive decision-making.
-    </p>
-  </div>
-
-  <br class="ux-row">
-    <p class="ux-left">Outcome</p>
-    <ol class="ux-right">
-      <li>Defined and prioritised core product flows (discovery, posting, status tracking) based on user behaviour.</li>
-      <li>Designed a dual navigation system (map + list) to support different discovery patterns, and introduced real-time status tracking to reduce wasted trips.</li>
-      <li>Validated decisions through usability testing, and currently developing the MVP using React Native and Expo, working within technical constraints to prepare for real-world launch.</li>
-    </ol>
-  </div>
-
-  <div class="ux-row">
-    <p class="ux-left">My role</p>
-    <p class="ux-right">Designer, user researcher, developer</p>
-  </div>
-
-  <div class="ux-row">
-    <p class="ux-left">Tools</p>
-    <ol class="ux-right">
-      <li>Research & Testing: Semi-structured interviews, in-person usability testing</li>
-      <li>Design: Figma (wireframes, prototypes, design system)</li>
-      <li>Development: React Native, Expo, Supabase</li>
-    </ol>
-  </div>
 </div>
-<img src="./assets/meadows.jpeg" alt="Stooping Project Main Mockup" class="project-banner"/>
-<div class="ux-row">
-    <p class="ux-left">Opportunity</p>
-    <p class="ux-right">
-      I start by researching existing sharing platforms. Facebook groups (Edinburgh based group: Meadows share, street bounty) revealed fragmented sharing discussions, Nextdoor (community connection), OLIO (free food sharing) and TooGoodTooGo (surplus food rescue), showed different approaches to connecting sharers with seekers. Current methods for sharing free items are fragmented and inefficient. User either rely on general online platforms like Facebook groups or find items by chance on the street. There is no dedicated, location-aware solution that connects people who have items to share with those actively seeking them in their local area. A specialised resource-sharing application could improve discovery rates and create a more reliable, user-friendly experience for resource sharing.
-    </p>
-  </div>
-  
-<div class="ux-section">
-  <img src="./assets/research_roadmap.png" alt="Research Roadmap" class="project-banner">
-  <p class="img-text">Research Roadmap</p>
-</div>
 
 
-  <div class="ux-section">
-    
-  <p class="ux-title">01. User Research & Analysis</p>
-  <p class="ux-text">I conducted semi-structured interviews to understand how people currently share and discover free items, focusing on both online platforms (e.g. Facebook groups) and real-world street discovery. These methods were chosen to capture both digital behaviours and real-world constraints.</p>
-  <p class="ux-text">The research revealed two distinct pain point journeys: one is based on user experience on existing online platforms (Facebook groups), and another one is based on street finds. Understanding both digital and physical contexts was crucial to designing a comprehensive solution that addressed the full user experience.</p>
-<div class="ux-row">
-    <p class="ux-left">User Insight</p>
-      <ol class="ux-right">
-        <li>Users browse frequently but rarely act due to uncertainty around item availability or casual curiosity.</li>
-        <li>Users enjoy to have a regular and quick scanning on what items nearby.</li>
-        <li>Enthusiastic users want to quickly see nearby items while they're already out and about.</li>
-        <li>Real-time relevance is critical, outdated information leads to wasted trips.</li>
-        <li>Posting must be quick and low-effort to encourage contribution</li>
-        <li>Sharing items feels rewarding, users enjoy giving and seeing others benefit.</li>
-        <li>Users are flexible about item quality, but not about reliability</li>
-      </ol>
-    </div>
-    <p>These insights reframed the problem from “improving browsing” to “reducing uncertainty and enabling confident decision-making”.</p>
-</div>
-<div class="ux-section">
-  <img src="./assets/pain_point_journey.png" alt="Online user journey" class="project-banner">
-  <p class="img-text">User Journey with Pain Point (online)</p>
-</div>
-<div class="ux-section">
-  <img src="./assets/user_journey_street.png" alt="Street discovery journey" class="project-banner">
-  <p class="img-text">User Journey with Pain Point (street discovery)</p>
-</div>
+      <!-- LEARNING -->
 
-  <div class="ux-section">
-    <p class="ux-title">02. Design</p>
-    <p class="ux-text">
-      I began by mapping out users' basic actions and creating user flows to understand navigation paths through the app. This helped me identify all necessary key functionalities, screens and plan the app architecture. Key user journeys included: discovering items via map or list view, posting new finds, collecting items, and gallery for checking item history and profile page for user setting and user contribution. This planning phase ensured every screen had a clear purpose tied to user needs identified in research.
-    </p>
-  </div>
-  <div class="ux-section">
-    <img src="./assets/userflow.png" alt="User Flow Draft" class="project-banner"/>
-    <p class="img-text">User Flow Draft/App Structure</p>
-    <img src="./assets/user_flow.png" alt="User Flow" class="project-banner"/>
-    <p class="img-text">Basic User Flow</p>
-    <p class="project-text">
-    </p>
-  </div>
-  <div class="ux-section">
-    <p class="ux-text">Design Solutions</p>
-    <ol class="ux-text">
-      <b><li>Dual Navigation (map + list views)</li></b>
-      <p><b>Pain point</b>: Users had varying preferences for discovering items, some users prefer spatial exploration, others want quick scanning, list is accessible to screen reader.</p>
-      <p><b>Solution:</b>I chose a hybrid system despite added complexity, as discovery is the core product value.</p>
-      <p><b>Trace-off:</b> increased UI complexity</p>
-      <p><b>Decision: </b>default to map view, with quick toggle to list</p>
-      <b><li>Real-time status tracking</li></b>
-      <p><b>Pain point: </b>Users often encountered unavailable items, leading to wasted trips and frustration.</p>
-      <p><b>Solution: </b>Implemented status tracking system that users can mark items as 'collected' or 'unavailable' to reduce uncertainty.</p>
-      <p><b>Impact: </b>Reduces wasted trips and manages user expectations around availability.</p>
-      <p><b>Trade-off: </b>relied on user updates</p>
-      <p><b>Validation: </b>users consistently checked availability before deciding to travel.</p>
+      <div class="ux-section">
 
-      <b><li>Streamlined posting flow</li></b>
-      <p><b>Pain point: </b>Sharing items needed to be effortless to encourage community participation.</p>
-      <p><b>Solution: </b>I minimised required inputs to make sharing quick and effortless, informed by analysing existing posting behaviours and how users describe locations.</p>
-      <p><b>Impact: </b>Encourages more users to share finds, building community engagement.</p>
-      <p><b>Trade-off: </b>less structured data</p>
-    </ol>
-    <img src="./assets/posting_flow.png" alt="Posting Flow" class="project-banner"/>
-    <p class="ux-text">By analysing posting patterns across existing platforms, I identified that effective posts consistently combine street names, nearby landmarks, and visual cues.
-This informed the design of the posting flow, which balances minimal input with sufficient location context to ensure items remain easy to find.</p>
-  </div>
+        <p class="ux-title">What I'd explore next</p>
 
-  <div class="ux-section">
-    <div class="ux-row">
-      <p class="ux-left">Sketching</p>
-      <p class="ux-right">With screen planning complete, I developed low-fidelity wireframes and prototypes to establish information architecture and navigation patterns. </p>
-    </div>
-    <img src="./assets/initial_sketch.png" alt="Wireframe" class="project-banner"/>
-    <p class="img-text">Sketching & Wireframing</p>
-    <p class="project-text">
-    </p>
-  </div>
+        <p class="ux-text">
+          Real-world use introduces constraints that are difficult to reproduce
+          in a prototype — particularly unreliable connectivity and rapidly
+          changing item availability.
+        </p>
 
-  <div class="ux-section">
-    <img src="./assets/style_guide.png" alt="Style Guide" class="img-vertical"/>
-    <p class="img-text">Style Guide</p>
-    <div class="ux-row">
-      <p class="ux-left">Branding</p>
-      <p class="ux-right">I approached branding as an iterative process rather than a fixed starting point. While designing high-fidelity screens in Figma, I gradually refined visual elements, colors, typography, icons, logo, it allows the brand identity to emerge from functional design needs.</p>
-    </div>
-    <img src="./assets/prototyping.png" alt="Prototyping and high-fidelity design" class="project-banner" />
-    <div class="ux-row">
-      <p class="ux-left">High-fidelity Prototyping</p>
-      <p class="ux-right">In Figma, I developed high-fidelity prototypes with complete visual design, interactive states, and micro-interactions. While usability testing, users get in a clickable, interactive prototype, therefore users provided deeper insights and detailed feedback on usability and UX design.</p>
-    </div>
-  </div>
-  
+        <p class="ux-text">
+          One area I'm exploring next is a <strong>local-first approach</strong>,
+          allowing users to continue browsing and posting in low or no-network
+          conditions.
+        </p>
 
-  <div class="ux-section">
+      </div>
 
-    <p class="ux-title">03. Usability Testing</p>
-    <p class="ux-text">
-      I wrote test script and prepared some task-based scenarios to let users to complete with using the high-fidelity prototype. During the process, I identified usability issues and pain points, validated some of my assumptions, then iterated on the design to improve user experience based on testing insights. 
-    </p>
-    <p class="ux-text">All sessions were conducted in person, allowing me to observe user behaviour closely and follow up on any hesitation or confusion in real-time.</p>
-    <div class="ux-row">
-      <p class="ux-left">Insights</p>
-        <ol class="ux-right">
-          <li>Users can't find any scenarios to view item history so the gallery feature didn't fully align with their needs.</li>
-          <li>Posting was easy and required minimal effort.
-          </li>
-          <li>Partial item collection introduced confusion due to unclear states.</li>
-        </ol>
-    </div>
-    <div class="ux-row">
-      <p class="ux-left">Iteration</p>
-        <ol class="ux-right">
-          <li>Removed gallery feature replaced by 'Favourite' screen to track item status.</li>
-          <li>Simplified status handling to reduce cognitive load</li>
-          <li>I intentionally deferred solving partial collection, as it introduces significant UX and technical complexity.</li>
-        <li>Instead, I prioritised launching a simpler MVP to validate real-world behaviour before addressing edge cases.</li></ol>
-
-    </div>
-    
-    <img src="./assets/figma.png" alt="Final Design" class="project-banner"/>
-    <p></p>
-
-  </div>
-
-
-  <div class="ux-section">
-    <p class="ux-title">04. Learning and Next</p>
-    <p class="ux-text">This project reinforced the importance of prioritising real user behaviour over feature completeness. Rather than solving all edge cases upfront, I focused on defining a clear MVP that supports core user needs and can be validated in real-world usage. I am currently developing the MVP using React Native and Expo, making design decisions under technical constraints such as real-time updates and location handling.
-    </p>
-    <p class="ux-text">Next, I will iterate on key flows based on real user feedback and behaviour (e.g. successful collection rate). From a technical perspective, I plan to explore a local-first approach to support posting in low or no network conditions, ensuring users can still upload items in real-world, on-the-go scenarios.</p>
-  </div>
-    <div class="ux-section">
-    
-    <img src="./assets/develop.jpg" class="img-vertical" alt="Favourite screen on mobile"/>
-    <p class="img-text">Currently I'm working on developing favourite screen on React native Expo, at same time preparing closed testing.</p>
-  </div>
-
-</section>
+    </section>
 
   </main>
+
+
   <footer>
+
     <nav>
+
       <div class="nav-links-container">
+
         <ul class="nav-links">
+
           <li><a href="index.html#about">About</a></li>
           <li>|</li>
+
           <li><a href="index.html#projects">Projects</a></li>
           <li>|</li>
-          <!-- <li><a href="index.html#experience">Experience</a></li> -->
-          <!-- <li>|</li> -->
+
           <li><a href="ux.html">UX Design</a></li>
           <li>|</li>
+
           <li><a href="index.html#contact">Contact</a></li>
+
         </ul>
+
       </div>
+
     </nav>
+
   </footer>
+
+
   <script src="script.js"></script>
+
 </body>
 </html>
-
