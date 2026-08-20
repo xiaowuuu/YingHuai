@@ -1,279 +1,193 @@
-@media screen and (min-width: 576px) {
-  .about-pic {
-    width: 150px;
-    height: 150px;
-  }
-  .section__text h1 {
-    font-size: 3rem;
-  }
-  .title {
-    font-size: 2.5rem;
-  }
-  .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 400px;
-    gap: 1.5rem;
-  }
-  .skill-icon {
-    width: 45px;
-    height: 45px;
-  }
-  
-  .project-title {
-    font-size: 1.8rem;
-  }
-  .project-text {
-    font-size: 1.5rem;
-  }
-}
+/* =========================================================
+   RESPONSIVE LAYOUT
+   mediaqueries.css
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+   768px+
+========================================================= */
 
 @media screen and (min-width: 768px) {
-  section {
-    padding: 3rem 2rem;
-  }
-  
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
   #profile {
-    flex-direction: row;
-  }
-  
-  .about-pic {
-    width: 200px;
-    height: 200px;
-  }
-  .about-main {
-    flex-direction: row;
-    text-align: left;
-    gap: 2rem;
-  }
-  .codeclan-pic-container {
-    flex: 0 0 250px;
-  }
-  .about-text-container {
-    flex: 1;
-  }
-  
-  .section__text {
-    text-align: left;
-  }
-  
-  .btn-container {
-    justify-content: flex-start;
-  }
-  #about {
-    padding: 4vh 4rem 30px 4rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 
-  .section__content {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
+
+  /* -------------------------
+     ABOUT
+  ------------------------- */
+
+  .about-layout {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 4rem;
   }
-  .section__pic-container {
-    flex: 0 0 300px;
-    margin-right: 2rem;
-  }
-  
-  .about-text {
-    text-align: left;
-  }
-  .skills-section {
-    text-align: left;
-  }
-  .skills-section h3 {
-    text-align: center;
-  }
-  .skills-grid {
-    grid-template-columns: repeat(5, 1fr);
-    max-width: none;
-    margin: 0;
-    gap: 1.5rem;
-  }
-  
-  .skill-icon {
-    width: 50px;
-    height: 50px;
-  }
-  br {
-    display: none;
-  }
+
+
+  /* -------------------------
+     UX CASE STUDY
+  ------------------------- */
+
   #project-details {
-    padding: 4rem 2rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 
-  .project-section img {
-    max-width: 80%;
+
+  /* -------------------------
+     CONTACT
+  ------------------------- */
+
+  .contact-links {
+    flex-direction: row;
+    align-items: center;
   }
 
-  .project-section .project-text {
-    font-size: 1.25rem;
-  }
-
-  .contact-info-upper-container {
-  display:flex;
-  justify-content:center;
-  flex-direction: row;
 }
-}
+
+
+/* =========================================================
+   DESKTOP
+   1024px+
+========================================================= */
+
 @media screen and (min-width: 1024px) {
+
+  /* -------------------------
+     NAVIGATION
+  ------------------------- */
+
   #desktop-nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 15vh;
   }
+
   #hamburger-nav {
     display: none;
   }
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
-  }
-  .nav-links a {
-    color: black;
-    transition: all 300ms ease;
-  }
-  .nav-links a:hover {
-    color: grey;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: rgb(181, 181, 181);
-  }
-  section {
-    padding: 4rem 8rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
   #profile {
+    min-height: calc(100vh - 76px);
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+
+  /* -------------------------
+     ABOUT
+  ------------------------- */
+
+  .about-layout {
+    grid-template-columns: 280px minmax(0, 1fr);
     gap: 5rem;
-    padding-top: 4vh;
-  }
-  
-  .about-pic {
-    width: 250px;
-    height: 250px;
-  }
-  
-  .section__text h1 {
-    font-size: 3.5rem;
-  }
-  .title {
-    font-size: 3rem;
-  }
-  #about {
-    padding: 4vh 6rem 30px 6rem;
-  }
-  .about-content {
-    gap: 3rem;
-  }
-  .codeclan-pic-container {
-    flex: 0 0 300px;
-  }
-  .skills-grid {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1.5rem;
-  }
-  .skill-icon {
-    width: 55px;
-    height: 55px;
-  }
-  .section__content {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .about-main-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .section__pic-container {
-    display: flex;
-    justify-content: center;
-    margin: 0;
   }
 
-  .skill-icon {
-    justify-content: flex-start;
+
+  /* -------------------------
+     PROJECTS
+  ------------------------- */
+
+  .work-featured {
+    grid-template-columns:
+      minmax(0, 1.5fr)
+      minmax(300px, 0.7fr);
+
+    gap: 5rem;
   }
-  #projects {
-    max-width: 1200px;
-    margin: 0 auto;
+
+
+  /* -------------------------
+     UX PAGE
+  ------------------------- */
+
+  #project-details {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
   }
-  
-  .project-background {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .project-title {
-    font-size: 2.5rem;
-  }
-  .project-text {
-    font-size: 1.5rem;
-  }
+
+
+  /* -------------------------
+     FOOTER
+  ------------------------- */
+
   footer {
-    display:grid;
-  }
-  .details-text-container {
-    width: 70%;
+    display: block;
   }
 
-  .contact-info-upper-container {
-  display:flex;
-  justify-content:center;
-  flex-direction: row;
 }
-}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1200px+
+========================================================= */
 
 @media screen and (min-width: 1200px) {
+
   #profile {
-    padding: 4vh 8rem 30px 8rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
-  .about-pic {
-    width: 280px;
-    height: 280px;
+
+  .hero-title {
+    font-size: clamp(5rem, 7vw, 8rem);
   }
-  
-  #about {
-    padding: 4vh 8rem 30px 8rem;
+
+  .about-layout {
+    grid-template-columns: 300px minmax(0, 1fr);
   }
-  .about-content {
-    gap: 1rem;
+
+  .work-featured {
+    gap: 6rem;
   }
-  .skills-grid {
-    gap: 1rem;
-  }
-  .details-img-container {
-    flex: 0 0 700px;
-  }
-  .project-title {
-    font-size: 3rem;
-  }
-  .project-button-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .project-title {
-    position: absolute;
-  }
-  .details-container {
-    display: flex;
-    flex-direction: row;
-  }
-  .project-img {
-    width:100%;
-    height:100%;
-  }
-  .project-text {
-    font-size: 1.5rem;
-  }
+
 }
 
-@media (max-width: 600px) {
+
+/* =========================================================
+   MOBILE
+   767px and below
+========================================================= */
+
+@media screen and (max-width: 767px) {
+
+  /* -------------------------
+     NAVIGATION
+  ------------------------- */
+
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+  }
+
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
+  #profile {
+    min-height: auto;
+  }
+
+
+  /* -------------------------
+     UX ROWS
+  ------------------------- */
+
   .ux-row {
     grid-template-columns: 1fr;
   }
@@ -281,10 +195,92 @@
   .ux-left {
     margin-bottom: 0.3rem;
   }
-  .project-banner {
-    width:100%;
-    height:100%;
+
+
+  /* -------------------------
+     PROJECTS
+  ------------------------- */
+
+  .work-grid {
+    grid-template-columns: 1fr;
   }
-  
+
+  .work-featured {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* -------------------------
+     ABOUT
+  ------------------------- */
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* -------------------------
+     SKILLS
+  ------------------------- */
+
+  .skills-layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* -------------------------
+     CONTACT
+  ------------------------- */
+
+  .contact-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+   600px and below
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  #project-details {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .download-badges {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   400px and below
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .download-badges {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}

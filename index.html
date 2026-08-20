@@ -3,253 +3,624 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ying Huai</title>
+
+  <title>Ying Huai — Product Designer & Developer</title>
+
+  <meta
+    name="description"
+    content="Ying Huai is a product designer and developer based in Edinburgh, combining UX research, product design and frontend development."
+  >
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mediaqueries.css">
 </head>
+
 <body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
   <nav id="desktop-nav">
+
     <div class="logo">Ying Huai</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <!-- <li><a href="#experience">Experience</a></li> -->
-        <li><a href="ux.html" class=""active>UX Design</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="ux.html">UX Design</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
   </nav>
+
+
   <nav id="hamburger-nav">
+
     <div class="logo">Ying Huai</div>
+
     <div class="hamburger-menu">
+
       <div class="hamburger-icon" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
       </div>
+
       <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <!-- <li><a href="#experience" onclick="toggleMenu()">Experience</a></li> -->
-        <li><a href="ux.html" class=""active>UX Design</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+        <li>
+          <a href="#about" onclick="toggleMenu()">About</a>
+        </li>
+
+        <li>
+          <a href="#projects" onclick="toggleMenu()">Work</a>
+        </li>
+
+        <li>
+          <a href="ux.html" onclick="toggleMenu()">UX Design</a>
+        </li>
+
+        <li>
+          <a href="#contact" onclick="toggleMenu()">Contact</a>
+        </li>
+
       </div>
+
     </div>
+
   </nav>
+
+
   <main>
-  <section id="profile">
-    <div class="about-pic-container">
-      <img class="about-pic" src="./assets/profile_photo.png" alt="profile pic">
-    </div>
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1> Ying Huai</h1>
-      <p class="section__text__p2">Full-Stack Developer</p>
-      <div class="btn-container">
-        <button 
-        class="btn btn-color-2" 
-        onclick="window.open('https://www.linkedin.com/in/yinghuai/')"
-        >LinkedIn
-      </button>
-      <button 
-        class="btn btn-color-1" 
-        onclick="window.open('https://github.com/xiaowuuu')"
-        >GitHub
-      </button>
-      </div>
-    </div>
-  </section>
 
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="about-content">
-      <div class="about-main">
-        <div class="codeclan-pic-container">
-          <img src="./assets/codeclan.png" alt="Profile picture" class="codeclan-pic" />
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section id="profile">
+
+      <div class="hero-content">
+
+        <p class="hero-eyebrow">
+          Product Designer · Developer · Researcher
+        </p>
+
+        <h1 class="hero-title">
+          Designing products<br>
+          people can actually use.
+        </h1>
+
+        <p class="hero-description">
+          I'm Ying, a product designer and developer based in Edinburgh.
+          I combine UX research, Figma and frontend development to turn
+          ideas into thoughtful, production-ready digital products.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="#projects" class="btn btn-primary">
+            View my work
+          </a>
+
+          <a
+            href="ux.html"
+            class="btn btn-secondary"
+          >
+            UX case study
+          </a>
+
         </div>
-        <div class="about-text-container">
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+      <div class="section-heading">
+
+        <p class="section__text__p1">
+          About
+        </p>
+
+        <h2 class="title">
+          A designer who<br>
+          understands how to build.
+        </h2>
+
+      </div>
+
+
+      <div class="about-layout">
+
+        <div class="about-image">
+
+          <img
+            src="./assets/profile_photo.png"
+            alt="Ying Huai"
+          >
+
+        </div>
+
+
+        <div class="about-content-text">
+
+          <p class="about-lead">
+            I work across product design and development,
+            with a particular interest in understanding
+            <strong>why people behave the way they do</strong>
+            and turning those insights into better products.
+          </p>
+
           <p class="about-text">
-            Hello, I'm Ying, a full-stack developer with a background in digital marketing and product design. My passion for understanding user needs is complemented by a master's degree in Sociology, where I focused on researching online behaviors. I built my technical foundation through a 16-week coding bootcamp at CodeClan, learning JavaScript, Java, and Python. Since graduating, I've worked in digital marketing while volunteering with Scottish Tech Army, where I've built full-stack web app using TypeScript to continue developing my coding skills.
-          </p>
-        </div>
-      </div>
-        <div class="skills-section">
-        <h3>Skills: </h3>
-        <div class="skills-grid">
-          <div class="skill-item">
-        <img class="skill-icon" alt="javascript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-      </div>
-      <div class="skill-item">
-        <img class="skill-icon" alt="typescript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
-      </div>
-        <div class="skill-item">
-          <img class="skill-icon" alt="react" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-icon" alt="nodejs" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-icon" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-icon" alt="flask" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original-wordmark.svg" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-icon" alt="java" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-icon" alt="spring" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-icon" alt="postgresql" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-icon" alt="mongodb" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-icon" alt="tailwindcss" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-plain-wordmark.svg" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-icon" alt="git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-icon" alt="figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-  </section>
-  <div class="project-background-container"><img src="./assets/project-background.png" alt="project-background" class="project-background"></div>
+            My background combines digital marketing, sociology
+            and software development. I completed a master's degree
+            in Sociology, followed by a 16-week software development
+            bootcamp at CodeClan.
 
-    <div class="project-button-container">
-        <button class="project-button"
-        onclick="window.open('https://github.com/xiaowuuu/ask_edinburgh')"
-        >
-          <div class="details-container">
-            <div class="details-text-container">
-              <p class="project-text">Ask Edinburgh is an AI trip planner powered by ChatGPT API, providing info about Edinburgh. Built with Typescript, React, Node.js, Express, MongoDB, and Tailwind CSS.</p>
-              <h1 class="project-title">AI TRIP PLANNER</h1>
-            </div>
-            <div class="details-img-container">
-              <img src="./assets/edinburgh-mockups.png" alt="Image 1" class="project-img">
-            </div>
-          </div>
-        </button>
-        <button class="project-button">
-          <div class="details-container">
-            <div class="details-text-container">
-              <p class="project-text">Flexible Working Scotland is a platform connecting people with flexible work opportunities to help them re-enter the workforce. Built with TypeScript, React, Express, and MySQL.</p>
-              <h1 class="project-title">JOB PORTAL</h1>
-            </div>
-            <div class="details-img-container">
-              <img src="./assets/fws_mockup.png" alt="Image 2" class="project-img">
-            </div>
-          </div>
-        </button>
-        <button class="project-button"
-        onclick="window.open('https://github.com/xiaowuuu/PazaakPadawan')"
-        >
-          <div class="details-container">
-            <div class="details-text-container">
-              <p class="project-text">A Java and React TypeScript card game featuring two-player turn-based play using Websockets, and single-player mode against a computer opponent.</p>
-              <h1 class="project-title">CARD GAME</h1>
-            </div>
-            <div class="details-img-container">
-              <img src="./assets/cardgame-mockup.png" alt="Image 3" class="project-img">
-            </div>
-          </div>
-        </button>
-        <button class="project-button"
-        onclick="window.open('https://github.com/xiaowuuu/bao_restaurant')"
-        >
-          <div class="details-container">
-            <div class="details-text-container">
-            <p class="project-text">A full-stack CRUD web application developed using Python and Flask. It simulates a food order system with a many-to-many relationship database.</p>
-            <h1 class="project-title">ORDER SYSTEM</h1>
-          </div>
-            <div class="details-img-container">
-              <img src="./assets/order_mockup.png" alt="Image 4" class="project-img">
-            </div>
-          </div>
-        </button>
-      </div>
-  <!-- <section id="experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Professional Experience</h1>
-  </section> -->
-  <!-- <div class="project-button-container">
-    <div class="project-button">
-      <div class="details-container">
-        <div class="details-text-container">
-          <p class="project-text">Conducted user research and requirements gathering;
           </p>
-        <p class="project-text">Defined product features and development roadmap;
+
+          <p class="about-text">
+
+            Since then, I've worked across product design,
+            frontend development and digital marketing —
+            building products with React, React Native and
+            TypeScript while using research and experimentation
+            to guide product decisions.
+
           </p>
-        <p class="project-text">Implemented iterative improvements based on feedback;
-          </p>
-        <p class="project-text">Collaborated with development and design teams; 
-          </p>
-          <h1 class="project-title">PRODUCT DESIGNER</h1>
-        </div>
-        <div class="details-img-container">
-          <img src="./assets/xingzuocheng.png" alt="Image 1" class="project-img">
-        </div>
-      </div>
-    </div>
-    <div class="project-button">
-      <div class="details-container">
-        <div class="details-text-container">
-          <p class="project-text">Content operations;</p>
-            <p class="project-text">Built online communities and brand advocacy;</p>
-            <p class="project-text">Online campaigns;</p>
-            <p class="project-text">Collaborated on landing page development delivery;</p>
-          <h1 class="project-title">SOCIAL MEDIA MARKETING</h1>
-        </div>
-        <div class="details-img-container">
-          <img src="./assets/mono.png" alt="Image 2" class="project-img">
-        </div>
-      </div>
-  </div>
-  </div> -->
-  <section id="contact">
-    <h1 class="title">Get In Touch</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="./assets/email.png" alt="email icon" class="icon contact-icon email-icon">
-          <p><a href="mailto:yinghuaidev@gmail.com">yinghuaidev@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-            <img src="./assets/linkedin.png" alt="linkedin icon" class="icon contact-icon">
-            <p><a href="https://www.linkedin.com/in/yinghuai/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+
+
+          <div class="about-meta">
+
+            <div>
+              <span>Based in</span>
+              <strong>Edinburgh, UK</strong>
+            </div>
+
+            <div>
+              <span>Focus</span>
+              <strong>Product Design · UX · Development</strong>
+            </div>
+
           </div>
+
+        </div>
+
       </div>
-  </section>
-</main>
+
+    </section>
+
+
+    <!-- =========================
+         SELECTED WORK
+    ========================== -->
+
+    <section id="projects">
+
+      <div class="section-heading">
+
+        <p class="section__text__p1">
+          Selected work
+        </p>
+
+        <h2 class="title">
+          Projects
+        </h2>
+
+        <p class="section-intro">
+          A selection of products I've designed and built,
+          spanning UX research, product design and development.
+        </p>
+
+      </div>
+
+
+      <!-- STREETJAMS -->
+
+      <article class="work-featured">
+
+        <div class="work-image">
+
+          <img
+            src="./assets/mockup_banner.png"
+            alt="StreetJams mobile app"
+          >
+
+        </div>
+
+
+        <div class="work-info">
+
+          <div class="work-number">
+            01
+          </div>
+
+          <p class="work-category">
+            Product Design · UX Research · Development
+          </p>
+
+          <h3>
+            StreetJams
+          </h3>
+
+          <p>
+            A location-based mobile app for discovering,
+            sharing and collecting free items left in the street.
+          </p>
+
+          <div class="work-result">
+
+            <strong>Live on iOS & Android</strong>
+
+            <span>
+              300+ downloads
+            </span>
+
+          </div>
+
+          <a
+            href="ux.html"
+            class="work-link"
+          >
+            View case study →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- OTHER PROJECTS -->
+
+      <div class="work-grid">
+
+
+        <!-- ASK EDINBURGH -->
+
+        <article class="work-card">
+
+          <div class="work-card-image">
+
+            <img
+              src="./assets/edinburgh-mockups.png"
+              alt="Ask Edinburgh AI trip planner"
+            >
+
+          </div>
+
+          <div class="work-card-content">
+
+            <span class="work-number">
+              02
+            </span>
+
+            <p class="work-category">
+              Full-Stack Development
+            </p>
+
+            <h3>
+              Ask Edinburgh
+            </h3>
+
+            <p>
+              An AI-powered trip planner built with
+              TypeScript, React, Node.js, Express,
+              MongoDB and Tailwind CSS.
+            </p>
+
+            <a
+              href="https://github.com/xiaowuuu/ask_edinburgh"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="work-link"
+            >
+              View on GitHub →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- FLEXIBLE WORKING -->
+
+        <article class="work-card">
+
+          <div class="work-card-image">
+
+            <img
+              src="./assets/fws_mockup.png"
+              alt="Flexible Working Scotland platform"
+            >
+
+          </div>
+
+          <div class="work-card-content">
+
+            <span class="work-number">
+              03
+            </span>
+
+            <p class="work-category">
+              Product Development
+            </p>
+
+            <h3>
+              Flexible Working Scotland
+            </h3>
+
+            <p>
+              A platform connecting people with flexible
+              work opportunities to help them re-enter
+              the workforce.
+            </p>
+
+            <span class="work-tech">
+              TypeScript · React · Express · MySQL
+            </span>
+
+          </div>
+
+        </article>
+
+
+        <!-- CARD GAME -->
+
+        <article class="work-card">
+
+          <div class="work-card-image">
+
+            <img
+              src="./assets/cardgame-mockup.png"
+              alt="Pazaak Padawan card game"
+            >
+
+          </div>
+
+          <div class="work-card-content">
+
+            <span class="work-number">
+              04
+            </span>
+
+            <p class="work-category">
+              Full-Stack Development
+            </p>
+
+            <h3>
+              Pazaak Padawan
+            </h3>
+
+            <p>
+              A multiplayer card game using React,
+              Java and WebSockets, with both
+              multiplayer and single-player modes.
+            </p>
+
+            <a
+              href="https://github.com/xiaowuuu/PazaakPadawan"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="work-link"
+            >
+              View on GitHub →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- ORDER SYSTEM -->
+
+        <article class="work-card">
+
+          <div class="work-card-image">
+
+            <img
+              src="./assets/order_mockup.png"
+              alt="Restaurant order system"
+            >
+
+          </div>
+
+          <div class="work-card-content">
+
+            <span class="work-number">
+              05
+            </span>
+
+            <p class="work-category">
+              Full-Stack Development
+            </p>
+
+            <h3>
+              Restaurant Order System
+            </h3>
+
+            <p>
+              A full-stack CRUD application built with
+              Python and Flask, modelling a restaurant
+              ordering system with relational data.
+            </p>
+
+            <a
+              href="https://github.com/xiaowuuu/bao_restaurant"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="work-link"
+            >
+              View on GitHub →
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+      <div class="section-heading">
+
+        <p class="section__text__p1">
+          Capabilities
+        </p>
+
+        <h2 class="title">
+          Design + development
+        </h2>
+
+      </div>
+
+
+      <div class="skills-layout">
+
+        <div class="skills-group">
+
+          <h3>
+            Product & UX
+          </h3>
+
+          <p>
+            UX Research · User Flows · Information Architecture ·
+            Wireframing · Prototyping · Usability Testing ·
+            Design Systems · Figma
+          </p>
+
+        </div>
+
+
+        <div class="skills-group">
+
+          <h3>
+            Development
+          </h3>
+
+          <p>
+            React · React Native · TypeScript · JavaScript ·
+            Node.js · Python · Java · Supabase · PostgreSQL ·
+            MongoDB · Git
+          </p>
+
+        </div>
+
+
+        <div class="skills-group">
+
+          <h3>
+            Other
+          </h3>
+
+          <p>
+            Digital Marketing · Growth Experiments ·
+            Content Strategy · Product Analytics
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+      <div class="contact-content">
+
+        <p class="section__text__p1">
+          Contact
+        </p>
+
+        <h2 class="contact-title">
+          Let's build something
+          useful.
+        </h2>
+
+        <p class="contact-description">
+          I'm currently open to product design, UX design,
+          product design engineering and hybrid roles.
+        </p>
+
+        <div class="contact-links">
+
+          <a
+            href="mailto:yinghuaidev@gmail.com"
+          >
+            yinghuaidev@gmail.com
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/yinghuai/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn →
+          </a>
+
+          <a
+            href="https://github.com/xiaowuuu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li>|</li>
-          <li><a href="#projects">Projects</a></li>
-          <li>|</li>
-          <!-- <li><a href="#experience">Experience</a></li> -->
-          <!-- <li>|</li> -->
-          <li><a href="ux.html">UX</a></li>
-          <li>|</li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+
+    <div class="footer-inner">
+
+      <span>
+        Ying Huai
+      </span>
+
+      <span>
+        Product Designer · Developer
+      </span>
+
+      <span>
+        © 2026
+      </span>
+
+    </div>
+
   </footer>
+
+
   <script src="script.js"></script>
+
 </body>
 </html>
-
