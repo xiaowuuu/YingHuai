@@ -1,136 +1,13 @@
 /* =========================================================
    RESPONSIVE LAYOUT
    mediaqueries.css
+   Must be linked AFTER style.css.
+   Breakpoints: 1200+ / 1024+ / <=900 / <=600 / <=400
 ========================================================= */
 
 
 /* =========================================================
-   TABLET
-   768px+
-========================================================= */
-
-@media screen and (min-width: 768px) {
-
-  /* -------------------------
-     HERO
-  ------------------------- */
-
-  #profile {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
-
-
-  /* -------------------------
-     ABOUT
-  ------------------------- */
-
-  .about-layout {
-    grid-template-columns: 240px minmax(0, 1fr);
-    gap: 4rem;
-  }
-
-
-  /* -------------------------
-     UX CASE STUDY
-  ------------------------- */
-
-  #project-details {
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-
-
-  /* -------------------------
-     CONTACT
-  ------------------------- */
-
-  .contact-links {
-    flex-direction: row;
-    align-items: center;
-  }
-
-}
-
-
-/* =========================================================
-   DESKTOP
-   1024px+
-========================================================= */
-
-@media screen and (min-width: 1024px) {
-
-  /* -------------------------
-     NAVIGATION
-  ------------------------- */
-
-  #desktop-nav {
-    display: flex;
-  }
-
-  #hamburger-nav {
-    display: none;
-  }
-
-
-  /* -------------------------
-     HERO
-  ------------------------- */
-
-  #profile {
-    min-height: calc(100vh - 76px);
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
-
-  /* -------------------------
-     ABOUT
-  ------------------------- */
-
-  .about-layout {
-    grid-template-columns: 280px minmax(0, 1fr);
-    gap: 5rem;
-  }
-
-
-  /* -------------------------
-     PROJECTS
-  ------------------------- */
-
-  .work-featured {
-    grid-template-columns:
-      minmax(0, 1.5fr)
-      minmax(300px, 0.7fr);
-
-    gap: 5rem;
-  }
-
-
-  /* -------------------------
-     UX PAGE
-  ------------------------- */
-
-  #project-details {
-    padding-top: 8rem;
-    padding-bottom: 10rem;
-  }
-
-
-  /* -------------------------
-     FOOTER
-  ------------------------- */
-
-  footer {
-    display: block;
-  }
-
-}
-
-
-/* =========================================================
-   LARGE DESKTOP
-   1200px+
+   LARGE DESKTOP  (1200px and up)
 ========================================================= */
 
 @media screen and (min-width: 1200px) {
@@ -140,10 +17,6 @@
     padding-bottom: 10rem;
   }
 
-  .hero-title {
-    font-size: clamp(5rem, 7vw, 8rem);
-  }
-
   .about-layout {
     grid-template-columns: 300px minmax(0, 1fr);
   }
@@ -151,20 +24,36 @@
   .work-featured {
     gap: 6rem;
   }
-
 }
 
 
 /* =========================================================
-   MOBILE
-   767px and below
+   DESKTOP  (1024px and up)
 ========================================================= */
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1024px) {
 
-  /* -------------------------
-     NAVIGATION
-  ------------------------- */
+  #project-details {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+  }
+
+  .work-featured {
+    grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.7fr);
+    gap: 5rem;
+  }
+}
+
+
+/* =========================================================
+   TABLET & MOBILE  (900px and below)
+   Nav switches to hamburger here; only this breakpoint
+   controls #desktop-nav / #hamburger-nav.
+========================================================= */
+
+@media screen and (max-width: 900px) {
+
+  /* ---------- Navigation ---------- */
 
   #desktop-nav {
     display: none;
@@ -172,96 +61,319 @@
 
   #hamburger-nav {
     display: flex;
+    justify-content: space-between;   /* logo left, menu right */
+    align-items: center;              /* vertically centred */
+    width: 100%;
+    height: 68px;
+    padding: 0 5vw;
+    border-bottom: 1px solid var(--line);
+    background: rgba(247, 246, 242, 0.94);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 
-
-  /* -------------------------
-     HERO
-  ------------------------- */
-
-  #profile {
-    min-height: auto;
+  .hamburger-menu {
+    position: relative;
   }
 
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+  }
 
-  /* -------------------------
-     UX ROWS
-  ------------------------- */
+  .hamburger-icon span {
+    width: 100%;
+    height: 1.5px;
+    background: var(--text);
+    transition: all 0.3s ease;
+  }
+
+  /* optional: turn the icon into an X when open */
+  .hamburger-icon.open span:first-child {
+    transform: translateY(8.25px) rotate(45deg);
+  }
+
+  .hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.open span:last-child {
+    transform: translateY(-8.25px) rotate(-45deg);
+  }
+
+  .menu-links {
+    position: absolute;
+    top: calc(100% + 1.5rem);          /* sits just below the nav bar */
+    right: 0;
+    width: 210px;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    background: var(--surface);
+    border: 0 solid var(--line);       /* no stray line when closed */
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    z-index: 1000;
+  }
+
+  .menu-links.open {
+    max-height: 320px;
+    padding: 0.5rem 0;
+    border-width: 1px;
+  }
+
+  .menu-links li {
+    list-style: none;
+  }
+
+  .menu-links a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: var(--text);
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .menu-links a:hover {
+    background: var(--bg);
+  }
+
+  /* ---------- UX case study ---------- */
+
+  #project-details {
+    padding: 5rem 5vw 6rem;
+  }
+
+  #project-details > .title {
+    margin-bottom: 2.5rem;
+    font-size: clamp(3rem, 10vw, 4.5rem);
+  }
+
+  #project-details > .project-banner {
+    margin-bottom: 5rem;
+  }
+
+  .ux-section,
+  .ux-section:first-of-type {
+    margin-bottom: 5rem;
+  }
 
   .ux-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 130px minmax(0, 1fr);
+    column-gap: 2rem;
   }
 
-  .ux-left {
-    margin-bottom: 0.3rem;
+  /* ---------- Homepage ---------- */
+
+  #profile {
+    min-height: calc(100vh - 68px);
+    padding: 6rem 5vw;
   }
 
+  .hero-title {
+    font-size: clamp(3.5rem, 11vw, 6rem);
+  }
 
-  /* -------------------------
-     PROJECTS
-  ------------------------- */
-
-  .work-grid {
-    grid-template-columns: 1fr;
+  .about-layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 3rem;
   }
 
   .work-featured {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
-
-
-  /* -------------------------
-     ABOUT
-  ------------------------- */
-
-  .about-layout {
-    grid-template-columns: 1fr;
-  }
-
-
-  /* -------------------------
-     SKILLS
-  ------------------------- */
 
   .skills-layout {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
-
-  /* -------------------------
-     CONTACT
-  ------------------------- */
-
-  .contact-links {
-    flex-direction: column;
-    align-items: flex-start;
+  .contact-title {
+    font-size: clamp(3.5rem, 11vw, 6rem);
   }
-
 }
 
 
 /* =========================================================
-   SMALL MOBILE
-   600px and below
+   SMALL MOBILE  (600px and below)
 ========================================================= */
 
 @media screen and (max-width: 600px) {
 
+  /* ---------- UX case study ---------- */
+
   #project-details {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding: 4rem 1.25rem 5rem;
+  }
+
+  #project-details > .section__text__p1 {
+    margin-bottom: 1rem;
+  }
+
+  #project-details > .title {
+    margin-bottom: 2rem;
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  #project-details > .project-banner {
+    margin-bottom: 4rem;
+    border-radius: 2px;
+  }
+
+  .ux-section,
+  .ux-section:first-of-type {
+    gap: 1.5rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .ux-section:nth-of-type(2) {
+    padding: 1.5rem;
+  }
+
+  .ux-text {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .ux-row {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding: 1.25rem 0;
+  }
+
+  .ux-left {
+    font-size: 0.68rem;
+  }
+
+  .ux-right {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .img-text {
+    margin-top: -0.75rem;
+    font-size: 0.68rem;
+  }
+
+  .img-vertical {
+    width: 100%;
   }
 
   .download-badges {
     flex-wrap: wrap;
+    gap: 10px;
   }
 
+  .download-badges img {
+    height: 42px;
+  }
+
+  /* ---------- Homepage ---------- */
+
+  #profile {
+    min-height: auto;
+    padding: 6rem 1.25rem 7rem;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    margin-bottom: 1.5rem;
+    font-size: clamp(3.2rem, 15vw, 5rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    flex: 1;
+  }
+
+  #about,
+  #projects,
+  #skills {
+    padding: 6rem 1.25rem;
+  }
+
+  .section-heading {
+    margin-bottom: 3rem;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-image {
+    max-width: 220px;
+  }
+
+  .about-lead {
+    font-size: 1.55rem;
+  }
+
+  .about-meta {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .work-featured {
+    margin-bottom: 6rem;
+  }
+
+  .work-info h3 {
+    font-size: 2.2rem;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .contact-title {
+    font-size: clamp(3.5rem, 15vw, 5rem);
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  /* ---------- Footer ---------- */
+
+  footer {
+    padding: 1.5rem 1.25rem;
+  }
+
+  footer .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 
 /* =========================================================
-   VERY SMALL MOBILE
-   400px and below
+   VERY SMALL MOBILE  (400px and below)
 ========================================================= */
 
 @media screen and (max-width: 400px) {
@@ -279,8 +391,7 @@
   }
 
   .download-badges {
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
   }
-
 }
